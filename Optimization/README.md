@@ -7,7 +7,7 @@ Contents:
 
 `Intertemporal`: contains main-lake-IT.cpp (the C++ code used to optimize the four objective lake management problem using an intertemporal, open loop solution strategy), as well as its makefile and a job submission script
 
-`SOWs_Type6.txt`: file containing random natural P inflows generated from a log-normal distribution with mean 0.03 and variance $10^{-5}$
+`SOWs_Type6.txt`: file containing random natural P inflows generated from a log-normal distribution with mean 0.03 and variance 10^-5
 
 `boostutil.h`: file containing utility functions for boost matrices and vectors
 
