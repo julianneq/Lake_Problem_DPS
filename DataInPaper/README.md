@@ -7,16 +7,16 @@ Contents:
 The actual data used in Quinn et al. (In Review)
 
 * `DPS`: Directory containing 
-1) Reference set (`DPS.reference`) and result file (`DPS.resultfile`) found for the 4-objective version of the lake problem using DPS
-2) Metrics of the 50 DPS seeds in the subdirectory `metrics`
-3) The re-evaluated objective function values in the 1000 alternative SOWs in the subdirectory `re-eval`
-4) Values of the domain satisficing criterion for each policy on the 3 criteria considered in the paper (`DPSrobustness.txt`)
+1) Reference set (`DPS.reference`) and result file (`DPS.resultfile`) found for the 4-objective version of the lake problem using DPS,
+2) Metrics of the 50 DPS seeds in the subdirectory `metrics`,
+3) The re-evaluated objective function values in the 1000 alternative SOWs in the subdirectory `re-eval`, and
+4) Values of the domain satisficing criterion for each policy on the 3 criteria considered in the paper (`DPSrobustness.txt`).
 
 * `Intertemporal`: Directory containing 
-1) Reference set (`Intertemporal.reference`) and result file (`Intertemporal.resultfile`) found for the 4-objective version of the lake problem using DPS
-2) Metrics of the 50 intertemporal seeds in the subdirectory `metrics`
-3) The re-evaluated objective function values in the 1000 alternative SOWs in the subdirectory `re-eval`
-4) Values of the domain satisficing criterion for each policy on the 3 criteria considered in the paper (`ITrobustness.txt`)
+1) Reference set (`Intertemporal.reference`) and result file (`Intertemporal.resultfile`) found for the 4-objective version of the lake problem using DPS,
+2) Metrics of the 50 intertemporal seeds in the subdirectory `metrics`,
+3) The re-evaluated objective function values in the 1000 alternative SOWs in the subdirectory `re-eval`, and
+4) Values of the domain satisficing criterion for each policy on the 3 criteria considered in the paper (`ITrobustness.txt`).
 
 * `LHsamples.txt`: file containing the alternative SOWs used for the re-evaluation. Columns are b, q, mu, sigma, delta and X0, in that order.
 
