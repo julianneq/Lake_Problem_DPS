@@ -1,5 +1,5 @@
 ### Lake Problem DPS vs. Intertemporal Study (C++, Python, Bash)
-This repository contains all of the code used for the study described in the following submitted paper: Quinn, J. D., P. M. Reed, and K. Keller, "Direct Policy Search for Robust Multi-Objective Management of Deeply Uncertain Socio-Ecological Tipping Points", Environmental Modelling and Software, In Review.
+This repository contains all of the code used for the study described in the following submitted paper: Quinn, J. D., P. M. Reed, and K. Keller, "Direct Policy Search for Robust Multi-Objective Management of Deeply Uncertain Socio-Ecological Tipping Points", Environmental Modelling and Software, Accepted.
 
 Intended for use with the MOEAFramework, Borg and pareto.py. Licensed under the GNU Lesser General Public License.
 
