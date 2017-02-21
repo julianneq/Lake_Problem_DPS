@@ -11,6 +11,6 @@ Contents:
 
 * `Re-evaluation`: Directory containing the code for re-evaluating the policies found from the above optimization on a set of alternative SOWs and calculating the satisficing metric for each policy
 
-* `FigureGeneration`: Code for generating the figures found in Quinn et al. (In Review)
+* `FigureGeneration`: Code for generating the figures found in Quinn et al. (Accepted)
 
 To reproduce the results from this study, first follow the steps given in the README of the `Optimization` directory, then those in `Re-evaluation`, and finally those in `FigureGeneration.`
