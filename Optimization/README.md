@@ -18,7 +18,7 @@ Contents:
 To compile and run:
 * Make sure you have [MOEAFramework](http://www.moeaframework.org). Download the "all-in-one executable" and put the .jar file in this directory.
 
-* Download the [Borg](http://borgmoea.org/) source code.  Copy the 'borg' folder to this directory. Add 'moeaframework.c' and 'moeaframework.h' to this directory.
+* Download the [Borg](http://borgmoea.org/) source code.  Copy the 'borg' folder to this directory. Add `moeaframework.c` and `moeaframework.h` to this directory.
 
 * Download [Pareto.py](https://github.com/matthewjwoodruff/pareto.py) and put it in this directory.
 
