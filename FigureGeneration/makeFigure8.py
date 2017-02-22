@@ -2,24 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def makeFigure8():
-    IT = np.loadtxt('./../Re-evaluation/ITrobustness.txt',delimiter=' ')
-    IT = IT*100
-    DPS = np.loadtxt('./../Re-evaluation/DPSrobustness.txt',delimiter=' ')
-    DPS = DPS*100
+    IT = 100*np.loadtxt('./../Re-evaluation/ITrobustness.txt',delimiter=' ')
+    DPS = 100*np.loadtxt('./../Re-evaluation/DPSrobustness.txt',delimiter=' ')
     
-    criteria = [0,1,2]
     titles = ['a) Economic Benefits > 0.2','b) Reliability > 95%','c) Economic Benefits > 0.2 & Reliability > 95%']
     p1 = plt.Rectangle((0, 0), 1, 1, fc='#08519c', edgecolor='none') # DPS color
     p2 = plt.Rectangle((0, 0), 1, 1, fc='#a50f15', edgecolor='none') # intertemporal color
     multiplier = [0.06, 0.03, 0.0]
     
     fig = plt.figure()
-    for i in range(len(criteria)):
+    for i in range(len(titles)):
         ax = fig.add_subplot(3,1,i+1)
-        ax.plot(range(np.shape(DPS)[0]+1),np.append(np.sort(DPS[:,criteria[i]])[::-1],0),color='#08519c', linewidth=2)
-        ax.plot(range(np.shape(IT)[0]+1),np.append(np.sort(IT[:,criteria[i]])[::-1],0),color='#a50f15', linewidth=2)
-        ax.fill_between(range(np.shape(DPS)[0]+1),np.append(np.sort(DPS[:,criteria[i]])[::-1],0),color='#08519c')
-        ax.fill_between(range(np.shape(IT)[0]+1),np.append(np.sort(IT[:,criteria[i]])[::-1],0),color='#a50f15')
+        ax.plot(range(np.shape(DPS)[0]+1),np.append(np.sort(DPS[:,i])[::-1],0),color='#08519c', linewidth=2)
+        ax.plot(range(np.shape(IT)[0]+1),np.append(np.sort(IT[:,i])[::-1],0),color='#a50f15', linewidth=2)
+        ax.fill_between(range(np.shape(DPS)[0]+1),np.append(np.sort(DPS[:,i])[::-1],0),color='#08519c')
+        ax.fill_between(range(np.shape(IT)[0]+1),np.append(np.sort(IT[:,i])[::-1],0),color='#a50f15')
         ax.tick_params(axis='both',labelsize=14)
         ax.set_xlim([0,np.shape(DPS)[0]+1])
         ax.set_ylim([0,100])
