@@ -22,30 +22,30 @@ To compile and run:
 
 * Download [Pareto.py](https://github.com/matthewjwoodruff/pareto.py) and put it in this directory.
 
-* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:
-`cd DPS && make`,
-`mkdir runtime`,
-`mkdir sets`,
-`qsub run_DPS_opt.sh`.
+* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:   
+`cd DPS && make`,   
+`mkdir runtime`,   
+`mkdir sets`,   
+`qsub run_DPS_opt.sh`.   
 You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_DPS_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly.
 
-* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:
-`cd Intertemporal && make`,
-`mkdir runtime`,
-`mkdir sets`,
-`qsub run_IT_opt.sh`.
+* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:   
+`cd Intertemporal && make`,   
+`mkdir runtime`,   
+`mkdir sets`,   
+`qsub run_IT_opt.sh`.   
 You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_IT_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly.
 
-* Next, find the reference sets across the 50 seeds of each solution strategy, and calculate runtime metrics. You will again need to make more directories for the output. From this directory, run the following commands:
-`mkdir DPS/metrics`,
-`mkdir DPS/objs`,
-`mkdir Intertemporal/metrics`,
-`mkdir Intertemporal/objs`,
-`mkdir output`,
-`mkdir error`,
-`sh get_objs.sh`,
-`sh find_refSets.sh`,
-`sh find_runtime_metrics.sh`.
+* Next, find the reference sets across the 50 seeds of each solution strategy, and calculate runtime metrics. You will again need to make more directories for the output. From this directory, run the following commands:   
+`mkdir DPS/metrics`,   
+`mkdir DPS/objs`,   
+`mkdir Intertemporal/metrics`,   
+`mkdir Intertemporal/objs`,   
+`mkdir output`,   
+`mkdir error`,   
+`sh get_objs.sh`,   
+`sh find_refSets.sh`,   
+`sh find_runtime_metrics.sh`.   
 `find_runtime_metrics.sh` runs multiple jobs in parallel. Line 3 may need to be changed to correspond to the version of the MOEAFramework you are using. Lines 3 and 4 of `find_refSets.sh` may be unnecessary, or need to be changed, depending on the machine you are using.
 
 Next, go to the Re-evaluation directory (`cd ./../Re-evaluation`) to re-evaluate the optimized policies on alternative SOWs.
