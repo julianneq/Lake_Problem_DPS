@@ -25,7 +25,7 @@ To run the re-evaluation:
 You can change the number of nodes and processors on line 3 of `resimulateDPS.sh` and `resimulateIT.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. If necessary, change lines 7 and 8 for your machine.
 
 * Next, calculate the domain satisficing criterion for the policies found by each solution strategy. From this directory run the following commands:   
-`module load python-2.7.5`
+`module load python-2.7.5`   
 `python calcRobustness.py`.   
 This should write `DPSrobustness.txt` and `ITrobustness.txt` to this directory.
 
