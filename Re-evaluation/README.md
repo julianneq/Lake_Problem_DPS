@@ -21,9 +21,12 @@ To run the re-evaluation:
 `mkdir DPS/output`,   
 `mkdir Intertemporal/output`,   
 `cd DPS && qsub resimulateDPS.sh`,   
-`cd ./../Intertemporal && resimulateIT.sh`.   
+`cd ./../Intertemporal && qsub resimulateIT.sh`.   
 You can change the number of nodes and processors on line 3 of `resimulateDPS.sh` and `resimulateIT.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. If necessary, change lines 7 and 8 for your machine.
 
-* Next, calculate the domain satisficing criterion for the policies found by each solution strategy. From this directory run `python calcRobustness.py`. This should write `DPSrobustness.txt` and `ITrobustness.txt` to this directory.
+* Next, calculate the domain satisficing criterion for the policies found by each solution strategy. From this directory run the following commands:   
+`module load python-2.7.5`
+`python calcRobustness.py`.   
+This should write `DPSrobustness.txt` and `ITrobustness.txt` to this directory.
 
 Next, go to the FigureGeneration directory (`cd ./../FigureGeneration`) to generate the plots found in Quinn et al. (In Review)
