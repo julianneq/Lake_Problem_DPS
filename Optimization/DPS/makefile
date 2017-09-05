@@ -2,6 +2,12 @@
 CXX = mpiCC
 CXXFLAGS = -c -Wall
 INC = -I /opt/boost/1.54.0/include
+LIBS = -lm
+UNAME_S = $(shell uname -s)
+
+ifneq (, $(findstring SunOS, $(UNAME_S)))
+    LIBS += -lnsl -lsocket -lresolv
+endif
 
 all: LakeDPSparallel
 
@@ -16,10 +22,10 @@ moeaframework.o: ./../borg/moeaframework.c ./../borg/moeaframework.h
 
 borgms.o: ./../borg/borgms.c ./../borg/borgms.h \
 	./../borg/borg.h
-	$(CXX) $(CXXFLAGS) ./../borg/borgms.c
+	$(CXX) $(CXXFLAGS) ./../borg/borgms.c $(LIBS)
 
 mt19937ar.o: ./../borg/mt19937ar.c ./../borg/mt19937ar.h
-	$(CXX) $(CXXFLAGS) ./../borg/mt19937ar.c
+	$(CXX) $(CXXFLAGS) ./../borg/mt19937ar.c $(LIBS)
 
 clean:
 	rm -rf *.o
