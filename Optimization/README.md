@@ -16,27 +16,27 @@ Contents:
 `find_refSets.sh`, `find_runtime_metrics.sh`, `get_objs.sh`: scripts for processing the MOEA output
 
 To compile and run:
-* Make sure you have [MOEAFramework](http://www.moeaframework.org). Download the "all-in-one executable" and put the .jar file in this directory.
+* Make sure you have the [MOEAFramework](http://www.moeaframework.org). Download the MOEAFramework-\*-Demo.jar file and copy it to this directory (`Lake_Problem_DPS/Optimization`).
 
-* Download the [Borg](http://borgmoea.org/) source code.  Copy the 'borg' folder to this directory. Add `moeaframework.c` and `moeaframework.h` to this directory.
+* Download the [Borg](http://borgmoea.org/) source code. Make a new directory in `Lake_Problem_DPS/Optimization/` called `borg` and copy the Borg source code to it. Also add `moeaframework.c` and `moeaframework.h` to the `/borg` directory.
 
-* Download [Pareto.py](https://github.com/matthewjwoodruff/pareto.py) and put it in this directory.
+* Download [Pareto.py](https://github.com/matthewjwoodruff/pareto.py) and put it in this directory (`Lake_Problem_DPS/Optimization/`).
 
-* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:   
+* From this directory (`Lake_Problem_DPS/Optimization/`), compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output by running the following commands from `Lake_Problem_DPS/Optimization/`:   
 `cd DPS && make`,   
 `mkdir runtime`,   
 `mkdir sets`,   
 `qsub run_DPS_opt.sh`.   
-You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_DPS_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly.
+You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_DPS_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. Note it may take awhile to run.
 
-* Compile and run the DPS optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output. From this directory, run the following commands:   
+* From this directory (`Lake_Problem_DPS/Optimization/`), compile and run the intertemporal optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output by running the following commands from `Lake_Problem_DPS/Optimization/`:   
 `cd Intertemporal && make`,   
 `mkdir runtime`,   
 `mkdir sets`,   
 `qsub run_IT_opt.sh`.   
-You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_IT_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly.
+You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_IT_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. Note it may take awhile to run. If there are enough processors available on your machine, you can run the DPS and intertemporal optimization at the same time.
 
-* Next, find the reference sets across the 50 seeds of each solution strategy, and calculate runtime metrics. You will again need to make more directories for the output. From this directory, run the following commands:   
+* Once the DPS and intertemporal optimization jobs have finished running, return to this directory (`Lake_Problem_DPS/Optimization/`). Next, find the reference sets across the 50 seeds of each solution strategy, and calculate runtime metrics. You will again need to make directories for the output by running the following commands from `Lake_Problem_DPS/Optimization/`:   
 `mkdir DPS/metrics`,   
 `mkdir DPS/objs`,   
 `mkdir Intertemporal/metrics`,   
