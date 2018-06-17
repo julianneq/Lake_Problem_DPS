@@ -7,7 +7,7 @@ Intended for use with the MOEAFramework, Borg and pareto.py. Licensed under the 
 
 Contents:
 
-* `DataInPaper`: Directory containing all of the data generated in this paper, including reference sets from the optimizaiton, SOWs used for re-evaluation, and the domain satisficing metric for each policy
+* `DataInPaper`: Directory containing all of the data generated in this paper, including reference sets from the optimization, SOWs used for re-evaluation, and the domain satisficing metric for each policy
 
 * `Optimization`: Directory containing the code for optimizing the lake problem using DPS and the intertemporal open loop control strategy
 
