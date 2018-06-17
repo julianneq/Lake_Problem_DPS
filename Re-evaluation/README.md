@@ -29,4 +29,4 @@ You can change the number of nodes and processors on line 3 of `resimulateDPS.sh
 `python calcRobustness.py`.   
 This should write `DPSrobustness.txt` and `ITrobustness.txt` to this directory.
 
-Next, go to the FigureGeneration directory (`cd ./../FigureGeneration`) to generate the plots found in Quinn et al. (In Review)
+Next, go to the FigureGeneration directory (`cd ./../FigureGeneration`) to generate the plots found in [Quinn et al. (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)
