@@ -66,7 +66,7 @@ def makeFigure10():
     ax.set_ylabel('q',fontsize=16,rotation='horizontal')
     box = ax.get_position()
     ax.set_position([box.x0, box.y0 + box.height*0.1, box.width, box.height*0.95])
-    ax.set_title('a) Intertemporal: Effect of b and q',loc='left',fontsize=12)
+    ax.set_title('c) Intertemporal: Effect of b and q',loc='left',fontsize=12)
     
     ax = fig.add_subplot(2,2,4)
     ax.scatter(IT_success[:,4],IT_success[:,1],facecolor='#006d2c',edgecolor='none')
@@ -79,7 +79,7 @@ def makeFigure10():
     ax.set_xlabel(r'$\delta$',fontsize=16)
     box = ax.get_position()
     ax.set_position([box.x0, box.y0 + box.height*0.1, box.width, box.height*0.95])
-    ax.set_title('a) Intertemporal: Effect of $\delta$',loc='left',fontsize=12)
+    ax.set_title('d) Intertemporal: Effect of $\delta$',loc='left',fontsize=12)
     
     fig.suptitle('Parameter Combinations Leading to Failure',fontsize=16)
     plt.figlegend([successPts, failPts],['Meets Criteria','Fails to Meet Criteria'],loc='lower center',ncol=2)
