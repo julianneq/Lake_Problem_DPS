@@ -1,9 +1,13 @@
 #!/bin/bash
-#PBS -l walltime=4:00:00
-#PBS -l nodes=4:ppn=16
-#PBS -j oe
+#SBATCH -D /scratch/jdq6nn/Lake_Problem_DPS/Re-evaluation/Intertemporal/		# working directory
+#SBATCH -o /scratch/jdq6nn/Lake_Problem_DPS/Re-evaluation/Intertemporal/output/job.%j.%N.out   # Name of the output file (eg. myMPI.oJobID)
+#SBATCH -N 5            					# Total number of nodes to request (up to 120)
+#SBATCH --ntasks-per-node 20           		# Number of processors per node (up to 20)
+#SBATCH -p parallel           				# Queue name "parallel"
+#SBATCH -A quinnlab       					# allocation name
+#SBATCH -t 0:30:00       					# Run time (hh:mm:ss) - up to 36 hours
+#SBATCH --mail-user=jdq6nn@virginia.edu     # address for email notification
+#SBATCH --mail-type=ALL 					# email at Begin and End of job
 
-cd $PBS_O_WORKDIR
-source /etc/profile.d/modules.sh
-module load python-2.7.5
+module load gcc openmpi python mpi4py
 mpirun python resimulateIT.py

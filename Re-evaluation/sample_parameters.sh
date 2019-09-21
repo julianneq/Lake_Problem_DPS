@@ -1,6 +1,6 @@
 NSAMPLES=1000
 METHOD=Latin
-JAVA_ARGS="-cp ./../Optimization/MOEAFramework-2.4-Demo.jar"
+JAVA_ARGS="-cp ./../Optimization/MOEAFramework-2.12-Demo.jar"
 
 # Generate the parameter samples
 echo -n "Generating parameter samples..."

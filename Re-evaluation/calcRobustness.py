@@ -33,7 +33,6 @@ def calcSatisfaction(Objs):
 
 nSamples=1000
 nObjs=4
-directory = './output'
 
 methods = ['DPS','Intertemporal']
 abbrevs=['DPS','IT']

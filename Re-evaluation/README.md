@@ -20,12 +20,12 @@ To run the re-evaluation:
 * Re-evaluate the DPS and intertemporal policies. You will need to make a directory for the output. This is set up to run in parallel using mpi4py. From this directory, run the following commands:   
 `mkdir DPS/output`,   
 `mkdir Intertemporal/output`,   
-`cd DPS && qsub resimulateDPS.sh`,   
-`cd ./../Intertemporal && qsub resimulateIT.sh`.   
-You can change the number of nodes and processors on line 3 of `resimulateDPS.sh` and `resimulateIT.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. If necessary, change lines 7 and 8 for your machine.
+`cd DPS && sbatch resimulateDPS.sh`,   
+`cd ./../Intertemporal && sbatch resimulateIT.sh`.   
+Within `resimulateDPS.sh` and `resimulateIT.sh` you should change the directory names on lines 2 and 3, and your email address on line 9. You can also change the number of nodes and processors on lines 4 and 5, but make sure to then scale the walltime on line 8 up or down, accordingly. If necessary, change line 12 for your machine.
 
 * Next, calculate the domain satisficing criterion for the policies found by each solution strategy. From this directory run the following commands:   
-`module load python-2.7.5`   
+`module load gcc/5.4.0 openmpi/3.1.4 python/2.7.16`   
 `python calcRobustness.py`.   
 This should write `DPSrobustness.txt` and `ITrobustness.txt` to this directory.
 
