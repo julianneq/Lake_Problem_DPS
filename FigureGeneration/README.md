@@ -5,7 +5,7 @@ Intended for use with the MOEAFramework, Borg and pareto.py. Licensed under the 
 Contents:
 Separate Python scripts to generate each of the 11 figures in [Quinn et al. (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017).
 
-To make the figures run `python makeAllFigures.py`. This should generate 11 pdfs of the figures in the paper. 
+To make the figures run `python33 makeAllFigures.py`. This should generate 11 pdfs of the figures in the paper. 
 There will be slight differences if you run it on your own optimization set. The seed used to sample synthetic natural P inflows in the C++ optimization code is based on the time of day, and therefore different reference sets will be found depending on when the optimization is run.
 
 If you want to generate the same figures as in the paper, move the data from `./../DataInPaper` to the following directories:
