@@ -1,7 +1,6 @@
 # Makefile for traditional lake problem
 CXX = mpiCC
-CXXFLAGS = -c -Wall
-INC = -I /opt/boost/1.54.0/include
+CXXFLAGS = -c -Wall -I /opt/ohpc/pub/libs/gnu8/openmpi3/boost/1.70.0/include
 LIBS = -lm
 UNAME_S = $(shell uname -s)
 
