@@ -26,14 +26,14 @@ To compile and run:
 `cd DPS && make`,   
 `mkdir runtime`,   
 `mkdir sets`,   
-`qsub run_DPS_opt.sh`.   
+`sbatch run_DPS_opt.sh`.   
 You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_DPS_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. Note it may take awhile to run.
 
 * From this directory (`Lake_Problem_DPS/Optimization/`), compile and run the intertemporal optimization code. This is set up to run in parallel using MPI. You will need to make directories for the output by running the following commands from `Lake_Problem_DPS/Optimization/`:   
 `cd Intertemporal && make`,   
 `mkdir runtime`,   
 `mkdir sets`,   
-`qsub run_IT_opt.sh`.   
+`sbatch run_IT_opt.sh`.   
 You may need to change the include statement on line 4 of the makefile to match the location of the Boost C++ library on your machine. You can also change the number of nodes and processors on line 3 of `run_IT_opt.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. Note it may take awhile to run. If there are enough processors available on your machine, you can run the DPS and intertemporal optimization at the same time.
 
 * Once the DPS and intertemporal optimization jobs have finished running, return to this directory (`Lake_Problem_DPS/Optimization/`). Next, find the reference sets across the 50 seeds of each solution strategy, and calculate runtime metrics. You will again need to make directories for the output by running the following commands from `Lake_Problem_DPS/Optimization/`:   
