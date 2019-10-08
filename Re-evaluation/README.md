@@ -20,8 +20,8 @@ To run the re-evaluation:
 * Re-evaluate the DPS and intertemporal policies. You will need to make a directory for the output. This is set up to run in parallel using mpi4py. From this directory, run the following commands:   
 `mkdir DPS/output`,   
 `mkdir Intertemporal/output`,   
-`cd DPS && qsub resimulateDPS.sh`,   
-`cd ./../Intertemporal && qsub resimulateIT.sh`.   
+`cd DPS && sbatch resimulateDPS.sh`,   
+`cd ./../Intertemporal && sbatch resimulateIT.sh`.   
 You can change the number of nodes and processors on line 3 of `resimulateDPS.sh` and `resimulateIT.sh`. Make sure to also scale the walltime on line 2 up or down, accordingly. If necessary, change lines 7 and 8 for your machine.
 
 * Next, calculate the domain satisficing criterion for the policies found by each solution strategy. From this directory run the following commands:   
