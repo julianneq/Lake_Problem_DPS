@@ -16,3 +16,6 @@ Contents:
 * `FigureGeneration`: Code for generating the figures found in Quinn et al. (2017)
 
 To reproduce the results from this study, first follow the steps given in the README of the `Optimization` directory, then those in `Re-evaluation`, and finally those in `FigureGeneration.`
+
+To use the specific branch that works on The Cube, after cloning the directory, run:
+git checkout Lake_Problem_DPS_cube
